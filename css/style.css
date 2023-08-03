@@ -1,0 +1,62 @@
+header a {
+    color: #000000;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; 
+}
+.navleft {
+    display: flex;
+    gap: 39px;
+    margin-right: 25px;
+    
+}
+.navright {
+    display: flex;
+    gap: 39px;
+    margin-right: 25px;
+    
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 250px;
+}
+.menuIcon{
+    display: flex;
+    gap: 100px;
+    margin-right: 50px;
+   
+}
+.h2{
+    text-align: center;
+}
+.vdd{
+    display: flex;
+gap: 22px;
+
+}
+.popular{
+    display: flex;
+    gap: 8px;
+    margin-left: 1500px;
+  
+   
+}
+.popular_img{
+    width: 16px;
+height: 16px;
+
+}
+.k1{
+    margin-top: 10px;
+}
+.boss_1{
+    margin-left: 137px;
+}
+.text_1{
+    margin-left: 142px;
+}

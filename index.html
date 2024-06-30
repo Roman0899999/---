@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Инструкции для техники</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <title>Админка</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <form action="search.php" method="get">
-    <input type="text" name="q" placeholder="Введите название техники">
-    <input type="submit" value="Искать">
-  </form>
+  <h1>Админка</h1>
+  
+  <div class="form-container">
+    <h2>Создать/Редактировать рубрику</h2>
+    <form id="category-form">
+      <input type="hidden" id="category-id">
+      <label for="category-name">Название:</label>
+      <input type="text" id="category-name">
+      <label for="category-slug">Slug:</label>
+      <input type="text" id="category-slug">
+      <label for="category-description">Описание:</label>
+      <textarea id="category-description"></textarea>
+      <label for="category-image">Изображение:</label>
+      <input type="file" id="category-image">
+      <button type="submit">Сохранить</button>
+    </form>
+  </div>
 
-  <ul>
-    <?php
-    // Подключиться к базе данных
-    $mysqli = new mysqli("localhost", "root", "password", "instructions_db");
+  <div id="category-list">
+    <!-- Здесь будет отображаться список рубрик -->
+  </div>
 
-    // Получить последние загруженные инструкции
-    $result = $mysqli->query("SELECT * FROM instructions ORDER BY date_uploaded DESC");
-
-    // Вывести список инструкций
-    while ($row = $result->fetch_assoc()) {
-      echo "<li><a href='instruction.php?id={$row['id']}'>{$row['name']}</a></li>";
-    }
-
-    // Закрыть соединение с базой данных
-    $mysqli->close();
-    ?>
-  </ul>
+  <script src="script.js"></script>
 </body>
 </html>
